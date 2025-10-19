@@ -1,0 +1,6 @@
+data/
+models/
+*.h5
+*.keras
+*.mp4
+*.avi
