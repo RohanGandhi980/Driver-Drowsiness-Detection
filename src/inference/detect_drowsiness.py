@@ -14,7 +14,7 @@ YAWN_MODEL_PATH = "models/yawn_cnn.h5"
 EYE_IMG_SIZE = (64, 64)
 MOUTH_IMG_SIZE = (64, 64)
 EYE_CLOSED_THRESH = 0.5
-YAWN_THRESH = 0.5
+YAWN_THRESH = 0.7
 SMOOTH_WINDOW = 5
 DEBUG_MODE = True  
 
@@ -104,8 +104,8 @@ with mp_face_mesh.FaceMesh(static_image_mode=False, max_num_faces=1,
                     left_input = np.expand_dims(left_rgb / 255.0, 0).astype(np.float32)
                     right_input = np.expand_dims(right_rgb / 255.0, 0).astype(np.float32)
 
-                    left_open = float(eye_model.predict(left_input, verbose=0)[0][0])
-                    right_open = float(eye_model.predict(right_input, verbose=0)[0][0])
+                    left_open = 1.0-float(eye_model.predict(left_input, verbose=0)[0][0])
+                    right_open = 1.0-float(eye_model.predict(right_input, verbose=0)[0][0])
 
                     # Average both sides
                     eye_open_prob = (left_open + right_open) / 2.0
