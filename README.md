@@ -7,17 +7,17 @@ Designed for automotive AI safety systems and compatible with embedded implement
 
 ---
 
-## 🧩 Project Highlights
-- 🧠 Dual-CNN architecture: Separate CNNs for **eye state** (open/closed) and **mouth state** (yawn/no-yawn) detection.  
-- 📸 Real-time inference using **MediaPipe FaceMesh** for robust ROI extraction even under low lighting.  
-- ⚙️ Fully modular data pipeline (`merge → clean → extract → train → infer`) for easy retraining on new data.  
-- 🚀 End-to-end deployment ready: tested with **live webcam feed** and **cabin camera footage**.  
-- 🪶 Lightweight inference (<50 ms per frame) — suitable for **in-vehicle edge devices** or **Jetson Nano deployment**.
+##  Project Highlights
+-  Dual-CNN architecture: Separate CNNs for **eye state** (open/closed) and **mouth state** (yawn/no-yawn) detection.  
+-  Real-time inference using **MediaPipe FaceMesh** for robust ROI extraction even under low lighting.  
+-  Fully modular data pipeline (`merge → clean → extract → train → infer`) for easy retraining on new data.  
+-  End-to-end deployment ready: tested with **live webcam feed** and **cabin camera footage**.  
+-  Lightweight inference (<50 ms per frame) — suitable for **in-vehicle edge devices** or **Jetson Nano deployment**.
 
 ---
 
 
-## 🧠 Dataset Sources
+##  Dataset Sources
 
 This project combines multiple open-source datasets to train and evaluate drowsiness detection models:
 
